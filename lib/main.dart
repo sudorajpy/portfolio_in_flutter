@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_in_flutter/constants/constants.dart';
 import 'package:portfolio_in_flutter/home_screen.dart';
 
 void main() {
@@ -14,6 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        inputDecorationTheme: kDefaultInputDecorationTheme,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),

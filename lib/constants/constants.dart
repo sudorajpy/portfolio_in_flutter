@@ -26,7 +26,7 @@ final kDefaultInputDecorationTheme = InputDecorationTheme(
 
 final kDefaultOutlineInputBorder = OutlineInputBorder(
   // Maybe flutter team need to fix it on web
-  // borderRadius: BorderRadius.circular(50),
+  borderRadius: BorderRadius.circular(50),
   borderSide: BorderSide(
     color: Color(0xFFCEE4FD),
   ),
