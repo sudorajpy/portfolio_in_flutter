@@ -15,35 +15,34 @@ class AboutSection extends StatelessWidget {
     return Container(
       constraints: const BoxConstraints(maxWidth: 1200),
       margin: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
-      child: Column(
-        children: [
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          return Column(
             children: [
-              AboutTextWithSign(),
-              Expanded(
-                child: AboutSectionText(),
+              if (constraints.maxWidth > 600) // Show AboutTextWithSign only on wider screens
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    AboutTextWithSign(),
+                    Expanded(
+                      child: AboutSectionText(),
+                    ),
+                    if (constraints.maxWidth > 900) // Show ExperienceCard only on wider screens
+                      ExperienceCard(numOfExp: '02'),
+                  ],
+                ),
+              if (constraints.maxWidth <= 600) // Show AboutTextWithSign on smaller screens
+                AboutTextWithSign(),
+              const SizedBox(
+                height: kDefaultPadding * 3,
               ),
-              ExperienceCard(numOfExp: '02'),
-              Expanded(
-                child: AboutSectionText(),
-              ),
+              if (constraints.maxWidth <= 900) // Show ExperienceCard only on smaller screens
+                ExperienceCard(numOfExp: '02'),
+              AboutSectionText(), // Always show AboutSectionText
             ],
-          ),
-          const SizedBox(
-            height: kDefaultPadding * 3,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              MyOutlinedButton(imgSrc: 'assets/images/hand.png',press: (){},text: "Hire Me!",),
-              SizedBox(width: kDefaultPadding *1.5,),
-              DefaultButton(imgSrc: 'assets/images/download.png',press: (){},text: 'Download CV',)
-            ],
-          ),
-        ],
+          );
+        },
       ),
     );
   }
 }
-
