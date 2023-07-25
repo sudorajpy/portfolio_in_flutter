@@ -28,8 +28,8 @@ class _SocialCardState extends State<SocialCard> {
 
       child: FittedBox(
         child: AnimatedContainer(
-          duration: Duration(milliseconds: 200),
-          padding: EdgeInsets.symmetric(vertical: kDefaultPadding/2, horizontal: kDefaultPadding *1.5),
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.symmetric(vertical: kDefaultPadding/2, horizontal: kDefaultPadding *1.5),
           decoration: BoxDecoration(
             color: widget.color,
             borderRadius: BorderRadius.circular(10),
@@ -38,8 +38,8 @@ class _SocialCardState extends State<SocialCard> {
           child: Row(
             children: [
               Image.asset(widget.imgUrl),
-              SizedBox(width: kDefaultPadding,),
-              Text(widget.name, style: TextStyle(color: Color(0xFF009688), fontSize: 20),)
+              const SizedBox(width: kDefaultPadding,),
+              Text(widget.name, style: const TextStyle(color: Color(0xFF009688), fontSize: 20),)
             ],
           ),
         ),

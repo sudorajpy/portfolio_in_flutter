@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_in_flutter/components/default_button.dart';
 import 'package:portfolio_in_flutter/components/section_title.dart';
 import 'package:portfolio_in_flutter/constants/constants.dart';
 import 'package:portfolio_in_flutter/models/recent_work.dart';
@@ -13,12 +12,12 @@ class RecentWorkSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: kDefaultPadding * 6),
+      margin: const EdgeInsets.only(top: kDefaultPadding * 6),
       width: double.infinity,
       // height: 600,
       decoration: BoxDecoration(
-        color: Color(0xFFF7E8FF).withOpacity(0.3),
-        image: DecorationImage(
+        color: const Color(0xFFF7E8FF).withOpacity(0.3),
+        image: const DecorationImage(
           fit: BoxFit.cover,
           image: AssetImage('assets/images/recent_work_bg.png'),
         ),
@@ -26,15 +25,15 @@ class RecentWorkSection extends StatelessWidget {
       child: Column(
         children: [
           Transform.translate(
-            offset: Offset(0, -80),
-            child: HireMeCard(),
+            offset: const Offset(0, -80),
+            child: const HireMeCard(),
           ),
-          SectionTitle(
+          const SectionTitle(
             title: 'Recent Works',
             subtile: 'My Strong Arenas',
             color: Color(0xFFFFB100),
           ),
-          SizedBox(height: kDefaultPadding * 2), 
+          const SizedBox(height: kDefaultPadding * 2), 
           SizedBox(
             width: 1200,
             child: Wrap(
@@ -43,7 +42,7 @@ class RecentWorkSection extends StatelessWidget {
               children: List.generate(recentWorks.length, (index) => RecentWorkCard(index: index, press: () {}),),
             ),
           ),
-          SizedBox(height: kDefaultPadding * 5),
+          const SizedBox(height: kDefaultPadding * 5),
         ],
       ),
     );

@@ -6,13 +6,13 @@ const kTextLightColor = Color(0xFF555555);
 const kDefaultPadding = 20.0;
 
 final kDefaultShadow = BoxShadow(
-  offset: Offset(0, 50),
+  offset: const Offset(0, 50),
   blurRadius: 50,
-  color: Color(0xFF0700B1).withOpacity(0.15),
+  color: const Color(0xFF0700B1).withOpacity(0.15),
 );
 
 final kDefaultCardShadow = BoxShadow(
-  offset: Offset(0, 20),
+  offset: const Offset(0, 20),
   blurRadius: 50,
   color: Colors.black.withOpacity(0.1),
 );
@@ -27,7 +27,7 @@ final kDefaultInputDecorationTheme = InputDecorationTheme(
 final kDefaultOutlineInputBorder = OutlineInputBorder(
   // Maybe flutter team need to fix it on web
   borderRadius: BorderRadius.circular(50),
-  borderSide: BorderSide(
+  borderSide: const BorderSide(
     color: Color(0xFFCEE4FD),
   ),
 );

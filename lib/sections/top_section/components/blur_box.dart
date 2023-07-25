@@ -14,9 +14,9 @@ class BlurBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Spacer(),
+        const Spacer(),
         GlassContent(size: size),
-        Spacer(flex: 3),],
+        const Spacer(flex: 3),],
         
     );
   }

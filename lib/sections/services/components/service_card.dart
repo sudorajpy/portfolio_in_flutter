@@ -15,7 +15,7 @@ class ServiceCard extends StatefulWidget {
 
 class _ServiceCardState extends State<ServiceCard> {
   bool isHover = false;
-  Duration duration = Duration(microseconds: 200);
+  Duration duration = const Duration(microseconds: 200);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class _ServiceCardState extends State<ServiceCard> {
       hoverColor: Colors.transparent,
       child: AnimatedContainer(
         duration: duration,
-        margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
+        margin: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
         height: 256,
         width: 256,
         decoration: BoxDecoration(
@@ -41,7 +41,7 @@ class _ServiceCardState extends State<ServiceCard> {
           children: [
             AnimatedContainer(
               duration: duration,
-              padding: EdgeInsets.all(kDefaultPadding * 1.5),
+              padding: const EdgeInsets.all(kDefaultPadding * 1.5),
               height: 120,
               width: 120,
               decoration: BoxDecoration(
@@ -50,7 +50,7 @@ class _ServiceCardState extends State<ServiceCard> {
                   boxShadow: [
                     if (!isHover)
                       BoxShadow(
-                          offset: Offset(0, 20),
+                          offset: const Offset(0, 20),
                           blurRadius: 30,
                           color: Colors.black.withOpacity(0.1)),
                   ]),
@@ -59,12 +59,12 @@ class _ServiceCardState extends State<ServiceCard> {
                 fit: BoxFit.fill,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: kDefaultPadding,
             ),
             Text(
               services[widget.index].title,
-              style: TextStyle(fontSize: 22),
+              style: const TextStyle(fontSize: 22),
             )
           ],
         ),

@@ -24,7 +24,7 @@ class _MenuState extends State<Menu> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
-      constraints: BoxConstraints(
+      constraints: const BoxConstraints(
         maxWidth: 1110,
       ),
       height: 100,
@@ -60,34 +60,34 @@ class _MenuState extends State<Menu> {
       });
     },
     child: Container(
-        constraints: BoxConstraints(minWidth: 122),
+        constraints: const BoxConstraints(minWidth: 122),
         height: 100,
         child: Stack(
           alignment: Alignment.center,
           children: [
             Text(
               menuItems[index],
-              style: TextStyle(fontSize: 20, color: kTextColor),
+              style: const TextStyle(fontSize: 20, color: kTextColor),
             ),
             AnimatedPositioned(
               duration: const Duration(milliseconds: 200),
-              child: Image.asset(
-                'assets/images/hover.png',
-                height: 46,
-              ),
               bottom:_selectedIndex != index && _hoveredIndex == index ? -20 : -32,
               left: 0,
               right: 0,
-            ),
-            AnimatedPositioned(
-              duration: const Duration(milliseconds: 200),
               child: Image.asset(
                 'assets/images/hover.png',
                 height: 46,
               ),
+            ),
+            AnimatedPositioned(
+              duration: const Duration(milliseconds: 200),
               bottom:_selectedIndex == index ? -2 : -32,
               left: 0,
               right: 0,
+              child: Image.asset(
+                'assets/images/hover.png',
+                height: 46,
+              ),
             ),
           ],
         )),

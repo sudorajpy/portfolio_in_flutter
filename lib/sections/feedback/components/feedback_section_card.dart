@@ -15,7 +15,7 @@ class FeedBackSectionCard extends StatefulWidget {
 }
 
 class _FeedBackSectionCardState extends State<FeedBackSectionCard> {
-  Duration duration = Duration(milliseconds: 200);
+  Duration duration = const Duration(milliseconds: 200);
   bool isHover = false;
   
   @override
@@ -30,8 +30,8 @@ class _FeedBackSectionCardState extends State<FeedBackSectionCard> {
       },
       child: AnimatedContainer(
         duration: duration,
-        margin: EdgeInsets.only(top: kDefaultPadding * 3),
-        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+        margin: const EdgeInsets.only(top: kDefaultPadding * 3),
+        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
         height: 350,
         width: 350,
         decoration: BoxDecoration(
@@ -42,7 +42,7 @@ class _FeedBackSectionCardState extends State<FeedBackSectionCard> {
         child: Column(
           children: [
             Transform.translate(
-              offset: Offset(0, -55),
+              offset: const Offset(0, -55),
               child: AnimatedContainer(
                 duration: duration,
                 height: 100,
@@ -60,7 +60,7 @@ class _FeedBackSectionCardState extends State<FeedBackSectionCard> {
             Text(
               feedbacks[widget.index].review,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w200,
                 color: kTextColor,
@@ -68,12 +68,12 @@ class _FeedBackSectionCardState extends State<FeedBackSectionCard> {
                 height: 1.5,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: kDefaultPadding * 2,
             ),
             Text(
               feedbacks[widget.index].name,
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(fontWeight: FontWeight.bold),
             ),
           ],
         ),

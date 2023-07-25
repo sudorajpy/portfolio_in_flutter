@@ -11,11 +11,11 @@ class ServiceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
-      constraints: BoxConstraints(maxWidth: 1200),
+      margin: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
+      constraints: const BoxConstraints(maxWidth: 1200),
       child: Column(
         children: [
-          SectionTitle(
+          const SectionTitle(
             color: Color(0xFFFF0000),
             subtile: 'My Strong Arenas',
             title: 'Service Offerings',

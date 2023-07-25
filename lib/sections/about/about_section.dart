@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_in_flutter/constants/constants.dart';
 
-import '../../components/default_button.dart';
-import '../../components/my_outlined_button.dart';
 import 'components/about_section_text.dart';
 import 'components/about_text_with_sign.dart';
 import 'components/experience_card.dart';
@@ -23,22 +21,22 @@ class AboutSection extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    AboutTextWithSign(),
-                    Expanded(
+                    const AboutTextWithSign(),
+                    const Expanded(
                       child: AboutSectionText(),
                     ),
                     if (constraints.maxWidth > 900) // Show ExperienceCard only on wider screens
-                      ExperienceCard(numOfExp: '02'),
+                      const ExperienceCard(numOfExp: '02'),
                   ],
                 ),
               if (constraints.maxWidth <= 600) // Show AboutTextWithSign on smaller screens
-                AboutTextWithSign(),
+                const AboutTextWithSign(),
               const SizedBox(
                 height: kDefaultPadding * 3,
               ),
               if (constraints.maxWidth <= 900) // Show ExperienceCard only on smaller screens
-                ExperienceCard(numOfExp: '02'),
-              AboutSectionText(), // Always show AboutSectionText
+                const ExperienceCard(numOfExp: '02'),
+              const AboutSectionText(), // Always show AboutSectionText
             ],
           );
         },

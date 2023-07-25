@@ -15,14 +15,14 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: kDefaultPadding),
-      constraints: BoxConstraints(maxWidth: 1200),
+      margin: const EdgeInsets.symmetric(vertical: kDefaultPadding),
+      constraints: const BoxConstraints(maxWidth: 1200),
       height: 100,
       child: Row(
         children: [
           Container(
-            margin: EdgeInsets.only(right: kDefaultPadding),
-            padding: EdgeInsets.only(bottom: 72),
+            margin: const EdgeInsets.only(right: kDefaultPadding),
+            padding: const EdgeInsets.only(bottom: 72),
             width: 8,
             height: 100,
             color: Colors.black,
@@ -38,7 +38,7 @@ class SectionTitle extends StatelessWidget {
               Text(
                 subtile,
                 style:
-                    TextStyle(fontWeight: FontWeight.w200, color: kTextColor),
+                    const TextStyle(fontWeight: FontWeight.w200, color: kTextColor),
               ),
               Text(
                 title,

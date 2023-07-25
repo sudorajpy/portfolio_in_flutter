@@ -26,7 +26,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
         });
       },
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 200),
         height: 320,
         width: 540,
         decoration: BoxDecoration(
@@ -39,21 +39,21 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
             Image.asset(recentWorks[widget.index].image),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(recentWorks[widget.index].category.toUpperCase()),
-                    SizedBox(height: kDefaultPadding / 2),
+                    const SizedBox(height: kDefaultPadding / 2),
                     Text(
                       recentWorks[widget.index].title,
                       style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                             height: 1.5,
                           ),
                     ),
-                    SizedBox(height: kDefaultPadding),
-                    Text(
+                    const SizedBox(height: kDefaultPadding),
+                    const Text(
                       'View Details',
                       style: TextStyle(decoration: TextDecoration.underline),
                     )

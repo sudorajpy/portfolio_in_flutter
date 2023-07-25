@@ -14,18 +14,18 @@ class DefaultButton extends StatelessWidget {
     return TextButton(
       //create padding for the button
       style: TextButton.styleFrom(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
             horizontal: kDefaultPadding * 2.5,
             vertical: kDefaultPadding),
-       backgroundColor: Color(0xFFE8E0E9),
+       backgroundColor: const Color(0xFFE8E0E9),
        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
       ),
       
       onPressed: press(), child: Row(
       children: [
         Image.asset(imgSrc,height: 40,),
-        SizedBox(width: kDefaultPadding,),
-        Text(text,style: TextStyle(color: Colors.black),),
+        const SizedBox(width: kDefaultPadding,),
+        Text(text,style: const TextStyle(color: Colors.black),),
       ],
     ));
   }

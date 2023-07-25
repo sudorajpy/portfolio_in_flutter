@@ -11,8 +11,8 @@ class HireMeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(kDefaultPadding*2),
-      constraints: BoxConstraints(maxWidth: 1200),
+      padding: const EdgeInsets.all(kDefaultPadding*2),
+      constraints: const BoxConstraints(maxWidth: 1200),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -21,15 +21,15 @@ class HireMeCard extends StatelessWidget {
       child: Row(
         children: [
           Image.asset('assets/images/email.png',height: 80,width: 80,),
-          Padding(padding: EdgeInsets.symmetric(vertical: kDefaultPadding,horizontal: kDefaultPadding),
+          const Padding(padding: EdgeInsets.symmetric(vertical: kDefaultPadding,horizontal: kDefaultPadding),
           child: SizedBox(
             
             height: 80,
 
             child: VerticalDivider(),
           ),),
-          SizedBox(width: kDefaultPadding,),
-          Expanded(child: Column(
+          const SizedBox(width: kDefaultPadding,),
+          const Expanded(child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('Starting New Project',style: TextStyle(fontSize: 42,fontWeight: FontWeight.bold),),

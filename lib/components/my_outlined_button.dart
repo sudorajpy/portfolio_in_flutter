@@ -19,9 +19,9 @@ class MyOutlinedButton extends StatelessWidget {
           style: OutlinedButton.styleFrom(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
                 horizontal: kDefaultPadding * 2, vertical: kDefaultPadding),
-            side: BorderSide(
+            side: const BorderSide(
               color: Color(0xFFEDEDED),
             ),
           ),
@@ -32,10 +32,10 @@ class MyOutlinedButton extends StatelessWidget {
                 imgSrc,
                 height: 40,
               ),
-              SizedBox(
+              const SizedBox(
                 width: kDefaultPadding,
               ),
-              Text(text, style: TextStyle(color: Colors.black)),
+              Text(text, style: const TextStyle(color: Colors.black)),
             ],
           )),
     );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_in_flutter/components/default_button.dart';
 import 'package:portfolio_in_flutter/components/section_title.dart';
 import 'package:portfolio_in_flutter/constants/constants.dart';
 
@@ -21,7 +20,7 @@ class ContactSection extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      child: Column(
+      child: const Column(
         children: [
           SizedBox(height:kDefaultPadding * 2,),
           SectionTitle(title: "Contact Me", subtile: "For project inquery and information", color:Color(0xFF07E24A),),
@@ -40,10 +39,10 @@ class ContactWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(maxWidth: 1200),
+      constraints: const BoxConstraints(maxWidth: 1200),
       padding: const EdgeInsets.all(kDefaultPadding*3),
-      margin: EdgeInsets.only(top: kDefaultPadding*2),
-      decoration: BoxDecoration(
+      margin: const EdgeInsets.only(top: kDefaultPadding*2),
+      decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
       ),
@@ -52,13 +51,13 @@ class ContactWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SocialCard(color: Color(0xFFD9FFFC), name: "Rajvinder Singh", imgUrl: "assets/images/skype.png",press: (){}),
-              SocialCard(color: Color(0xFFE4FFC7), name: "Rajvinder Singh", imgUrl: "assets/images/whatsapp.png",press: (){}),
-              SocialCard(color: Color(0xFFE8F0F9), name: "Rajvinder Singh", imgUrl: "assets/images/messanger.png",press: (){}),
+              SocialCard(color: const Color(0xFFD9FFFC), name: "Rajvinder Singh", imgUrl: "assets/images/skype.png",press: (){}),
+              SocialCard(color: const Color(0xFFE4FFC7), name: "Rajvinder Singh", imgUrl: "assets/images/whatsapp.png",press: (){}),
+              SocialCard(color: const Color(0xFFE8F0F9), name: "Rajvinder Singh", imgUrl: "assets/images/messanger.png",press: (){}),
             ],
           ),
-          SizedBox(height: kDefaultPadding*2,),
-          ContactForm()
+          const SizedBox(height: kDefaultPadding*2,),
+          const ContactForm()
         ],
       ),
     );

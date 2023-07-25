@@ -1,10 +1,8 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
 import '../../constants/constants.dart';
 import 'components/blur_box.dart';
-import 'components/glass_content.dart';
 import 'components/menu.dart';
 import 'components/person_pic.dart';
 
@@ -33,8 +31,8 @@ class TopSection extends StatelessWidget {
         child: Stack(
           children: [
             BlurBox(size: size),
-            PersonPic(),
-            Positioned(
+            const PersonPic(),
+            const Positioned(
               bottom: 0,
               child: Menu(),
             ),
